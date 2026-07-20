@@ -11,7 +11,7 @@ project/
     __init__.py                 # фабрика приложения (create_app)
     config.py                   # настройки (base URL, candidate id, БД, таймзона)
     storage.py                  # слой хранения (SQLite): скачанные файлы
-    api_client.py               # клиент внешнего API + обработка 429/403
+    api_client.py               # клиент внешнего API
     download_service.py         # оркестрация полного скачивания (фоновый поток)
     calculations.py             # подсчёт статистики цифр
     routes/
@@ -19,8 +19,8 @@ project/
       files.py                  # роуты страницы и API файлов/расчётов
     templates/
       base.html                 # общий layout
-      download.html             # страница "Скачать данные"
-      files.html                # страница списка файлов и расчётов
+      download.html             # страница "Скачивание"
+      files.html                # страница "Скачанные файлы"
     static/
       css/style.css
       js/download.js            # запуск скачивания + опрос прогресса
