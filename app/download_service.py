@@ -39,7 +39,7 @@ def start_download(base_url: str, candidate_id: str, tz_name: str) -> bool:
             started_at_nsk=datetime.now(ZoneInfo(tz_name)).strftime('%Y-%m-%d %H:%M:%S'),
             total_seen=0,
             downloaded=0,
-            message='Установление связи с API, запрос списка имён...',
+            message='Установление связи с API, запрос списка имен...',
         )
 
     thread = threading.Thread(target=_run, args=(base_url, candidate_id, tz_name), daemon=True)
@@ -93,7 +93,7 @@ def _run(base_url: str, candidate_id: str, tz_name: str):
                 time.sleep(2)
                 continue
 
-            count = len(names)
+            count = len(new_names)
 
             if count % 10 == 1 and count % 100 != 11:
                 status_msg = f'Получен {count} файл. Загрузка...'
@@ -162,7 +162,12 @@ def _run(base_url: str, candidate_id: str, tz_name: str):
 
             time.sleep(1.5)
 
-        _update(status='done', message='Каталог полностью скачан!')
+        _update(
+            status='done',
+            total_seen=downloaded_this_run,
+            downloaded=downloaded_this_run,
+            message='Каталог полностью скачан!'
+        )
 
     except requests.exceptions.HTTPError as exc:
         response = exc.response

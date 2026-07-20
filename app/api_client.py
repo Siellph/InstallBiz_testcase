@@ -16,9 +16,9 @@ class ExternalApiClient:
 
     def _request(self, method: str, path: str, **kwargs):
         '''
-        Выполняет запрос с учётом ограничений API:
-        - 429 Too Many Requests -> ждём Retry-After + запас и повторяем;
-        - 403 Forbidden -> читаем красивый текст из detail, ждём с запасом.
+        Выполняет запрос с учетом ограничений API:
+        - 429 Too Many Requests -> ожидание из Retry-After + запас и повтор;
+        - 403 Forbidden -> читаем текст из detail, ожидание с запасом.
         '''
         url = f'{self.base_url}{path}'
         while True:
@@ -59,7 +59,7 @@ class ExternalApiClient:
             return resp
 
     def get_names(self) -> list:
-        '''GET /api/files/names — возвращает список строк-имён (извлекает из ключа file_names).'''
+        '''GET /api/files/names — возвращает список строк-имен (извлекает из ключа file_names).'''
         resp = self._request('GET', '/api/files/names')
         return resp.json().get('file_names', [])
 
