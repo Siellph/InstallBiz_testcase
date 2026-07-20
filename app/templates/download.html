@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}Скачивание{% endblock %}
+
+{% block content %}
+<h1>Скачивание каталога файлов</h1>
+
+<button id="start-btn" class="btn">Скачать данные</button>
+
+<div id="progress" class="progress-block" hidden>
+    <p>Старт (НСК): <strong id="started-at">—</strong></p>
+    <p id="status-message">—</p>
+    <p>Скачано <strong id="downloaded-count">0</strong> из <strong id="total-count">0</strong></p>
+
+    <div class="progress-bar-outer">
+        <div id="progress-bar-inner" class="progress-bar-inner"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/download.js') }}"></script>
+{% endblock %}

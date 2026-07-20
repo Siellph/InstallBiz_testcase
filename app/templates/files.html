@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block title %}Скачанные файлы{% endblock %}
+
+{% block content %}
+<h1>Скачанные файлы</h1>
+
+<div class="toolbar">
+    <button id="select-page-btn" class="btn-secondary">Выбрать все на странице</button>
+    <button id="select-all-btn" class="btn-secondary">Выбрать вообще все</button>
+    <button id="clear-selection-btn" class="btn-secondary">Снять выделение</button>
+    <button id="calculate-btn" class="btn">Произвести расчёты</button>
+    <span id="selected-count">Выбрано: 0</span>
+</div>
+
+<table class="files-table">
+    <thead>
+        <tr>
+            <th></th>
+            <th>Имя файла</th>
+            <th id="sort-header" data-sort="desc">Время скачивания ⇅</th>
+        </tr>
+    </thead>
+    <tbody id="files-tbody"></tbody>
+</table>
+
+<div id="pagination" class="pagination"></div>
+
+<div id="results" class="results-block" hidden>
+    <h2>Общая статистика по цифрам</h2>
+    <table id="total-stats-table" class="stats-table"></table>
+
+    <h2>Статистика по файлам</h2>
+    <div id="per-file-stats"></div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/files.js') }}"></script>
+{% endblock %}

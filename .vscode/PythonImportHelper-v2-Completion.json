@@ -1,0 +1,442 @@
+[
+    {
+        "label": "Blueprint",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "current_app",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "jsonify",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "render_template",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "Blueprint",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "jsonify",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "render_template",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "request",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "download_service",
+        "importPath": "app",
+        "description": "app",
+        "isExtraImport": true,
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "storage",
+        "importPath": "app",
+        "description": "app",
+        "isExtraImport": true,
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "storage",
+        "importPath": "app",
+        "description": "app",
+        "isExtraImport": true,
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "create_app",
+        "importPath": "app",
+        "description": "app",
+        "isExtraImport": true,
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "aggregate_digit_counts",
+        "importPath": "app.calculations",
+        "description": "app.calculations",
+        "isExtraImport": true,
+        "detail": "app.calculations",
+        "documentation": {}
+    },
+    {
+        "label": "count_digits",
+        "importPath": "app.calculations",
+        "description": "app.calculations",
+        "isExtraImport": true,
+        "detail": "app.calculations",
+        "documentation": {}
+    },
+    {
+        "label": "io",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "io",
+        "description": "io",
+        "detail": "io",
+        "documentation": {}
+    },
+    {
+        "label": "time",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "time",
+        "description": "time",
+        "detail": "time",
+        "documentation": {}
+    },
+    {
+        "label": "zipfile",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "zipfile",
+        "description": "zipfile",
+        "detail": "zipfile",
+        "documentation": {}
+    },
+    {
+        "label": "requests",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "requests",
+        "description": "requests",
+        "detail": "requests",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "load_dotenv",
+        "importPath": "dotenv",
+        "description": "dotenv",
+        "isExtraImport": true,
+        "detail": "dotenv",
+        "documentation": {}
+    },
+    {
+        "label": "threading",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "threading",
+        "description": "threading",
+        "detail": "threading",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "ZoneInfo",
+        "importPath": "zoneinfo",
+        "description": "zoneinfo",
+        "isExtraImport": true,
+        "detail": "zoneinfo",
+        "documentation": {}
+    },
+    {
+        "label": "ExternalApiClient",
+        "importPath": "app.api_client",
+        "description": "app.api_client",
+        "isExtraImport": true,
+        "detail": "app.api_client",
+        "documentation": {}
+    },
+    {
+        "label": "sqlite3",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sqlite3",
+        "description": "sqlite3",
+        "detail": "sqlite3",
+        "documentation": {}
+    },
+    {
+        "label": "contextmanager",
+        "importPath": "contextlib",
+        "description": "contextlib",
+        "isExtraImport": true,
+        "detail": "contextlib",
+        "documentation": {}
+    },
+    {
+        "label": "index",
+        "kind": 2,
+        "importPath": "app.routes.download",
+        "description": "app.routes.download",
+        "peekOfCode": "def index():\n    return render_template('download.html')\n@download_bp.route('/api/download/start', methods=['POST'])\ndef start_download():\n    started = download_service.start_download(\n        base_url=current_app.config['EXTERNAL_API_BASE_URL'],\n        candidate_id=current_app.config['CANDIDATE_ID'],\n        tz_name=current_app.config['DISPLAY_TIMEZONE'],\n    )\n    return jsonify({'started': started})",
+        "detail": "app.routes.download",
+        "documentation": {}
+    },
+    {
+        "label": "start_download",
+        "kind": 2,
+        "importPath": "app.routes.download",
+        "description": "app.routes.download",
+        "peekOfCode": "def start_download():\n    started = download_service.start_download(\n        base_url=current_app.config['EXTERNAL_API_BASE_URL'],\n        candidate_id=current_app.config['CANDIDATE_ID'],\n        tz_name=current_app.config['DISPLAY_TIMEZONE'],\n    )\n    return jsonify({'started': started})\n@download_bp.route('/api/download/status')\ndef download_status():\n    return jsonify(download_service.get_state())",
+        "detail": "app.routes.download",
+        "documentation": {}
+    },
+    {
+        "label": "download_status",
+        "kind": 2,
+        "importPath": "app.routes.download",
+        "description": "app.routes.download",
+        "peekOfCode": "def download_status():\n    return jsonify(download_service.get_state())",
+        "detail": "app.routes.download",
+        "documentation": {}
+    },
+    {
+        "label": "download_bp",
+        "kind": 5,
+        "importPath": "app.routes.download",
+        "description": "app.routes.download",
+        "peekOfCode": "download_bp = Blueprint('download_bp', __name__)\n@download_bp.route('/')\ndef index():\n    return render_template('download.html')\n@download_bp.route('/api/download/start', methods=['POST'])\ndef start_download():\n    started = download_service.start_download(\n        base_url=current_app.config['EXTERNAL_API_BASE_URL'],\n        candidate_id=current_app.config['CANDIDATE_ID'],\n        tz_name=current_app.config['DISPLAY_TIMEZONE'],",
+        "detail": "app.routes.download",
+        "documentation": {}
+    },
+    {
+        "label": "files_page",
+        "kind": 2,
+        "importPath": "app.routes.files",
+        "description": "app.routes.files",
+        "peekOfCode": "def files_page():\n    return render_template('files.html')\n@files_bp.route('/api/files')\ndef list_files():\n    page = max(1, request.args.get('page', 1, type=int))\n    per_page = max(1, request.args.get('per_page', 20, type=int))\n    sort_dir = request.args.get('sort', 'desc')\n    rows, total = storage.get_files_page(page, per_page, sort_dir)\n    return jsonify({'files': rows, 'total': total, 'page': page, 'per_page': per_page})\n@files_bp.route('/api/files/all-names')",
+        "detail": "app.routes.files",
+        "documentation": {}
+    },
+    {
+        "label": "list_files",
+        "kind": 2,
+        "importPath": "app.routes.files",
+        "description": "app.routes.files",
+        "peekOfCode": "def list_files():\n    page = max(1, request.args.get('page', 1, type=int))\n    per_page = max(1, request.args.get('per_page', 20, type=int))\n    sort_dir = request.args.get('sort', 'desc')\n    rows, total = storage.get_files_page(page, per_page, sort_dir)\n    return jsonify({'files': rows, 'total': total, 'page': page, 'per_page': per_page})\n@files_bp.route('/api/files/all-names')\ndef all_names():\n    return jsonify({'names': storage.get_all_names()})\n@files_bp.route('/api/files/calculate', methods=['POST'])",
+        "detail": "app.routes.files",
+        "documentation": {}
+    },
+    {
+        "label": "all_names",
+        "kind": 2,
+        "importPath": "app.routes.files",
+        "description": "app.routes.files",
+        "peekOfCode": "def all_names():\n    return jsonify({'names': storage.get_all_names()})\n@files_bp.route('/api/files/calculate', methods=['POST'])\ndef calculate():\n    data = request.get_json(force=True) or {}\n    names = data.get('files', [])\n    content_map = storage.get_files_content(names)\n    per_file = {name: count_digits(content) for name, content in content_map.items()}\n    total = aggregate_digit_counts(per_file)\n    return jsonify({'total': total, 'per_file': per_file})",
+        "detail": "app.routes.files",
+        "documentation": {}
+    },
+    {
+        "label": "calculate",
+        "kind": 2,
+        "importPath": "app.routes.files",
+        "description": "app.routes.files",
+        "peekOfCode": "def calculate():\n    data = request.get_json(force=True) or {}\n    names = data.get('files', [])\n    content_map = storage.get_files_content(names)\n    per_file = {name: count_digits(content) for name, content in content_map.items()}\n    total = aggregate_digit_counts(per_file)\n    return jsonify({'total': total, 'per_file': per_file})",
+        "detail": "app.routes.files",
+        "documentation": {}
+    },
+    {
+        "label": "files_bp",
+        "kind": 5,
+        "importPath": "app.routes.files",
+        "description": "app.routes.files",
+        "peekOfCode": "files_bp = Blueprint('files_bp', __name__)\n@files_bp.route('/files')\ndef files_page():\n    return render_template('files.html')\n@files_bp.route('/api/files')\ndef list_files():\n    page = max(1, request.args.get('page', 1, type=int))\n    per_page = max(1, request.args.get('per_page', 20, type=int))\n    sort_dir = request.args.get('sort', 'desc')\n    rows, total = storage.get_files_page(page, per_page, sort_dir)",
+        "detail": "app.routes.files",
+        "documentation": {}
+    },
+    {
+        "label": "ExternalApiClient",
+        "kind": 6,
+        "importPath": "app.api_client",
+        "description": "app.api_client",
+        "peekOfCode": "class ExternalApiClient:\n    def __init__(self, base_url: str, candidate_id: str = None, timeout: int = 30, status_callback=None):\n        self.base_url = base_url.rstrip('/')\n        self.timeout = timeout\n        self.status_callback = status_callback\n        self.session = requests.Session()\n        if candidate_id:\n            self.session.headers['X-Candidate-Id'] = candidate_id\n    def _request(self, method: str, path: str, **kwargs):\n        '''",
+        "detail": "app.api_client",
+        "documentation": {}
+    },
+    {
+        "label": "count_digits",
+        "kind": 2,
+        "importPath": "app.calculations",
+        "description": "app.calculations",
+        "peekOfCode": "def count_digits(content: str) -> dict:\n    '''Возвращает {'0': N, '1': N, ..., '9': N} для одной строки содержимого.'''\n    counts = {str(d): 0 for d in range(10)}\n    for ch in content:\n        if ch.isdigit():\n            counts[ch] += 1\n    return counts\ndef aggregate_digit_counts(per_file_counts: dict) -> dict:\n    '''Суммирует статистику по нескольким файлам в одну общую.'''\n    total = {str(d): 0 for d in range(10)}",
+        "detail": "app.calculations",
+        "documentation": {}
+    },
+    {
+        "label": "aggregate_digit_counts",
+        "kind": 2,
+        "importPath": "app.calculations",
+        "description": "app.calculations",
+        "peekOfCode": "def aggregate_digit_counts(per_file_counts: dict) -> dict:\n    '''Суммирует статистику по нескольким файлам в одну общую.'''\n    total = {str(d): 0 for d in range(10)}\n    for counts in per_file_counts.values():\n        for digit, value in counts.items():\n            total[digit] += value\n    return total",
+        "detail": "app.calculations",
+        "documentation": {}
+    },
+    {
+        "label": "Config",
+        "kind": 6,
+        "importPath": "app.config",
+        "description": "app.config",
+        "peekOfCode": "class Config:\n    EXTERNAL_API_BASE_URL = os.environ.get('EXTERNAL_API_BASE_URL', 'http://localhost:8000/')\n    CANDIDATE_ID = os.environ.get('CANDIDATE_ID', '')\n    DATABASE_PATH = os.environ.get('DATABASE_PATH', 'app_data.sqlite3')\n    REQUEST_TIMEOUT = int(os.environ.get('REQUEST_TIMEOUT', '30'))\n    DISPLAY_TIMEZONE = os.environ.get('DISPLAY_TIMEZONE', 'Asia/Novosibirsk')",
+        "detail": "app.config",
+        "documentation": {}
+    },
+    {
+        "label": "get_state",
+        "kind": 2,
+        "importPath": "app.download_service",
+        "description": "app.download_service",
+        "peekOfCode": "def get_state() -> dict:\n    with _lock:\n        return dict(_state)\ndef _update(**kwargs):\n    with _lock:\n        _state.update(kwargs)\ndef start_download(base_url: str, candidate_id: str, tz_name: str) -> bool:\n    '''Запускает фоновое скачивание. Возвращает False, если уже запущено.'''\n    with _lock:\n        if _state['status'] == 'running':",
+        "detail": "app.download_service",
+        "documentation": {}
+    },
+    {
+        "label": "start_download",
+        "kind": 2,
+        "importPath": "app.download_service",
+        "description": "app.download_service",
+        "peekOfCode": "def start_download(base_url: str, candidate_id: str, tz_name: str) -> bool:\n    '''Запускает фоновое скачивание. Возвращает False, если уже запущено.'''\n    with _lock:\n        if _state['status'] == 'running':\n            return False\n        _state.update(\n            status='running',\n            started_at_nsk=datetime.now(ZoneInfo(tz_name)).strftime('%Y-%m-%d %H:%M:%S'),\n            total_seen=0,\n            downloaded=0,",
+        "detail": "app.download_service",
+        "documentation": {}
+    },
+    {
+        "label": "_lock",
+        "kind": 5,
+        "importPath": "app.download_service",
+        "description": "app.download_service",
+        "peekOfCode": "_lock = threading.Lock()\n_state = {\n    'status': 'idle',\n    'started_at_nsk': None,\n    'total_seen': 0,\n    'downloaded': 0,\n    'message': '',\n}\ndef get_state() -> dict:\n    with _lock:",
+        "detail": "app.download_service",
+        "documentation": {}
+    },
+    {
+        "label": "_state",
+        "kind": 5,
+        "importPath": "app.download_service",
+        "description": "app.download_service",
+        "peekOfCode": "_state = {\n    'status': 'idle',\n    'started_at_nsk': None,\n    'total_seen': 0,\n    'downloaded': 0,\n    'message': '',\n}\ndef get_state() -> dict:\n    with _lock:\n        return dict(_state)",
+        "detail": "app.download_service",
+        "documentation": {}
+    },
+    {
+        "label": "init_db",
+        "kind": 2,
+        "importPath": "app.storage",
+        "description": "app.storage",
+        "peekOfCode": "def init_db(db_path):\n    global _db_path\n    _db_path = db_path\n    with _get_conn() as conn:\n        conn.execute('''\n            CREATE TABLE IF NOT EXISTS files (\n                name TEXT PRIMARY KEY,\n                content TEXT NOT NULL,\n                downloaded_at TEXT NOT NULL\n            )",
+        "detail": "app.storage",
+        "documentation": {}
+    },
+    {
+        "label": "save_file",
+        "kind": 2,
+        "importPath": "app.storage",
+        "description": "app.storage",
+        "peekOfCode": "def save_file(name: str, content: str, downloaded_at: str):\n    with _get_conn() as conn:\n        conn.execute(\n            'INSERT OR REPLACE INTO files (name, content, downloaded_at) VALUES (?, ?, ?)',\n            (name, content, downloaded_at),\n        )\n        conn.commit()\ndef get_files_page(page: int, per_page: int, sort_dir: str = 'desc'):\n    order = 'ASC' if sort_dir == 'asc' else 'DESC'\n    offset = max(0, (page - 1) * per_page)",
+        "detail": "app.storage",
+        "documentation": {}
+    },
+    {
+        "label": "get_files_page",
+        "kind": 2,
+        "importPath": "app.storage",
+        "description": "app.storage",
+        "peekOfCode": "def get_files_page(page: int, per_page: int, sort_dir: str = 'desc'):\n    order = 'ASC' if sort_dir == 'asc' else 'DESC'\n    offset = max(0, (page - 1) * per_page)\n    with _get_conn() as conn:\n        rows = conn.execute(\n            f'SELECT name, downloaded_at FROM files ORDER BY downloaded_at {order} LIMIT ? OFFSET ?',\n            (per_page, offset),\n        ).fetchall()\n        total = conn.execute('SELECT COUNT(*) AS c FROM files').fetchone()['c']\n    return [dict(r) for r in rows], total",
+        "detail": "app.storage",
+        "documentation": {}
+    },
+    {
+        "label": "get_files_content",
+        "kind": 2,
+        "importPath": "app.storage",
+        "description": "app.storage",
+        "peekOfCode": "def get_files_content(names: list) -> dict:\n    if not names:\n        return {}\n    placeholders = ','.join('?' for _ in names)\n    with _get_conn() as conn:\n        rows = conn.execute(\n            f'SELECT name, content FROM files WHERE name IN ({placeholders})',\n            names,\n        ).fetchall()\n    return {r['name']: r['content'] for r in rows}",
+        "detail": "app.storage",
+        "documentation": {}
+    },
+    {
+        "label": "get_known_names",
+        "kind": 2,
+        "importPath": "app.storage",
+        "description": "app.storage",
+        "peekOfCode": "def get_known_names() -> set:\n    with _get_conn() as conn:\n        rows = conn.execute('SELECT name FROM files').fetchall()\n    return {r['name'] for r in rows}\ndef get_all_names() -> list:\n    with _get_conn() as conn:\n        rows = conn.execute('SELECT name FROM files ORDER BY downloaded_at DESC').fetchall()\n    return [r['name'] for r in rows]",
+        "detail": "app.storage",
+        "documentation": {}
+    },
+    {
+        "label": "get_all_names",
+        "kind": 2,
+        "importPath": "app.storage",
+        "description": "app.storage",
+        "peekOfCode": "def get_all_names() -> list:\n    with _get_conn() as conn:\n        rows = conn.execute('SELECT name FROM files ORDER BY downloaded_at DESC').fetchall()\n    return [r['name'] for r in rows]",
+        "detail": "app.storage",
+        "documentation": {}
+    },
+    {
+        "label": "_db_path",
+        "kind": 5,
+        "importPath": "app.storage",
+        "description": "app.storage",
+        "peekOfCode": "_db_path = 'app_data.sqlite3'\ndef init_db(db_path):\n    global _db_path\n    _db_path = db_path\n    with _get_conn() as conn:\n        conn.execute('''\n            CREATE TABLE IF NOT EXISTS files (\n                name TEXT PRIMARY KEY,\n                content TEXT NOT NULL,\n                downloaded_at TEXT NOT NULL",
+        "detail": "app.storage",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "run",
+        "description": "run",
+        "peekOfCode": "app = create_app()\nif __name__ == '__main__':\n    app.run(debug=True, port=5000, threaded=True)",
+        "detail": "run",
+        "documentation": {}
+    }
+]
